@@ -94,8 +94,8 @@ section{position:relative}
 .d1{transition-delay:.05s}.d2{transition-delay:.14s}.d3{transition-delay:.23s}.d4{transition-delay:.32s}.d5{transition-delay:.41s}
 
 /* ════════ HEADER ════════ */
-.topbar{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;justify-content:space-between;align-items:center;padding:20px 40px;mix-blend-mode:multiply;transition:padding .4s var(--ease)}
-.topbar.shrink{padding:12px 40px}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;justify-content:space-between;align-items:center;padding:20px 40px;transition:padding .4s var(--ease),background .4s var(--ease)}
+.topbar.shrink{padding:12px 40px;background:rgba(242,237,227,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .brand{font-family:"Fraunces",serif;font-weight:600;font-size:18px;letter-spacing:-.01em;display:flex;align-items:center;gap:9px}
 .brand .dot{width:8px;height:8px;border-radius:50%;background:var(--flame)}
 .topbar .tag{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.1em;color:var(--ink-soft)}
@@ -289,9 +289,13 @@ section{position:relative}
 
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
-  .reveal{opacity:1;transform:none}
+  .reveal{opacity:1!important;transform:none!important}
 }
 </style>
+<noscript><style>
+  .reveal{opacity:1!important;transform:none!important}
+  #progress{display:none}
+</style></noscript>
 </head>
 <body>
 
@@ -325,15 +329,15 @@ section{position:relative}
 
     <div class="hero-stats reveal d4">
       <div class="hstat">
-        <div class="num"><span data-count="3" data-suffix="">0</span><span class="u">년 4개월</span></div>
+        <div class="num"><span data-count="3" data-suffix="">3</span><span class="u">년 4개월</span></div>
         <div class="lab">한화오션 — 다국가·다부서<br>기관 프로젝트 조율</div>
       </div>
       <div class="hstat">
-        <div class="num"><span data-count="4" data-suffix="">0</span><span class="u">년+</span></div>
+        <div class="num"><span data-count="4" data-suffix="">4</span><span class="u">년+</span></div>
         <div class="lab">대치동 정시 컨설팅 —<br>수백 명 단위 현장 운영</div>
       </div>
       <div class="hstat">
-        <div class="num"><span data-count="100" data-suffix="">0</span><span class="u">+</span></div>
+        <div class="num"><span data-count="100" data-suffix="">100</span><span class="u">+</span></div>
         <div class="lab">동시 접속 실시간 이벤트<br>운영 시스템 단독 구축</div>
       </div>
     </div>
@@ -373,7 +377,7 @@ section{position:relative}
         <div class="an fr">iii.</div>
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/><circle cx="12" cy="12" r="4"/></svg></div>
         <h3>AI를 매일<br>쓰는 사람</h3>
-        <p>Claude Opus 4.8(Max) 등 최신 도구를 실무에 즉시 적용합니다. <b>반복·집계·분류 업무를 자동화</b>하고, 확보한 시간을 사람과 현장에 씁니다.</p>
+        <p>Claude 등 최신 도구를 실무에 즉시 적용합니다. <b>반복·집계·분류 업무를 자동화</b>하고, 확보한 시간을 사람과 현장에 씁니다.</p>
       </div>
     </div>
   </div>
@@ -398,7 +402,7 @@ section{position:relative}
         <div class="tl-body">
           <h3 class="tl-role">다국가·다부서 프로젝트를 펑크 없이 굴린 시간</h3>
           <div class="tl-org">한화오션(주) · 특수선무장설계팀 · 통신/무장 기본설계</div>
-          <p class="tl-desc">장보고-III 잠수함 프로젝트에서 독일 제조사(영어 핫라인), 조달부서, 배관·전장설계부서 사이의 이슈를 조율하고 국방과학연구소 보고 자료를 취합했습니다. <b>정해진 납기, 엄격한 문서 기준, 이해관계자 승인 절차, 리스크 관리</b>가 동시에 요구되는 환경에서 큰 프로젝트를 안정적으로 운영하는 법을 훈련했습니다. — 교육청·구청·기업 협업(B2G/B2B)에 그대로 연결되는 경험입니다.</p>
+          <p class="tl-desc">장보고-III 잠수함 프로젝트에서 독일 제조사(영어 핫라인), 조달부서, 배관·전장설계부서 사이의 이슈를 조율하고 국방과학연구소 보고 자료를 취합했습니다. <b>정해진 납기, 엄격한 문서 기준, 이해관계자 승인 절차, 리스크 관리</b>가 동시에 요구되는 환경에서 큰 프로젝트를 안정적으로 운영하는 법을 훈련했습니다. — 교육청·구청·기업 협업(B2G/B2B)에서 요구되는 문서 기준·승인 절차·리스크 관리 감각으로 연결해볼 수 있는 경험입니다.</p>
         </div>
       </div>
 
@@ -409,9 +413,9 @@ section{position:relative}
           <div class="kicker fr">최단기 최상위</div>
         </div>
         <div class="tl-body">
-          <h3 class="tl-role">낯선 분야를 빠르게 최상위로 끌어올리는 패턴</h3>
+          <h3 class="tl-role">새 도메인을 빠르게 익혀 기준으로 정리하는 힘</h3>
           <div class="tl-org">한서대학교 항공운항학과 · 3학년 1학기 수료</div>
-          <p class="tl-desc">한화오션 퇴사 후 다시 수능을 쳐 입학, <b>학점 4.36 / 전체 석차 1위</b>, 성적장학금 4회·이공계 장학금 전액. 새 도메인을 빠르게 흡수해 최상위까지 올리는 이 방식은, 진로교육이라는 새 분야를 익히는 데에도 동일하게 작동합니다.</p>
+          <p class="tl-desc">다시 수능을 쳐 입학해 <b>학점 4.36 / 전체 석차 1위</b>를 기록했습니다. 낯선 분야를 빠르게 흡수해 정리하는 이 방식은, 진로교육이라는 새 도메인을 익히는 데에도 똑같이 작동합니다.</p>
         </div>
       </div>
 
@@ -450,7 +454,7 @@ section{position:relative}
   <div class="wrap">
     <div class="map-intro-band reveal d1">
       <div class="e">03 · Role Fit</div>
-      <h3>어나더의 세 가지 일에, <em>제 경험을 그대로 맞춰보면</em></h3>
+      <h3>어나더의 세 가지 일에, <em>제 경험을 맞춰보면</em></h3>
     </div>
 
     <div class="maps">
@@ -504,7 +508,7 @@ section{position:relative}
       <div class="camp-head">
         <div class="e">04 · How I work</div>
         <h3>제가 운영을 <em>대하는 방식</em></h3>
-        <p>어나더는 이미 32만 명 규모를 안정적으로 굴리는 정교한 운영 체계를 갖고 있을 거라 생각합니다. 입사하면 <b>먼저 그 방식을 충분히 배우는 것</b>에서 시작하겠습니다. 아래는 제가 그동안 현장을 운영하며 중요하게 여겨온 관점일 뿐, 정답을 들고 온 건 아닙니다.</p>
+        <p>어나더는 이미 한 해 34만 명 이상을 만나는 규모의 운영 체계를 갖추고 있다고 이해했습니다. 입사하면 <b>먼저 그 방식을 충분히 배우는 것</b>에서 시작하겠습니다. 아래는 제가 그동안 현장을 운영하며 중요하게 여겨온 관점일 뿐, 정답을 들고 온 건 아닙니다.</p>
       </div>
 
       <div class="phases">
@@ -565,7 +569,7 @@ section{position:relative}
       <div class="ai-now reveal d3">
         <div class="lab"><span class="live"></span>Currently using · daily</div>
         <div class="model fr">Claude Opus 4.8</div>
-        <div class="plan">Max 요금제 · 매일 업무 적용</div>
+        <div class="plan">Max · 매일 업무 적용</div>
         <div class="note">자료 구조화, 반복 문서·운영 리포트 초안, 피드백 분류, 체크리스트 설계, 학교 소통 템플릿화에 실제로 사용합니다.</div>
         <div class="uses">
           <span class="use">자료 구조화</span>
@@ -592,7 +596,7 @@ section{position:relative}
     <div class="evid">
       <div class="ecard reveal d1">
         <div class="echo fr">01</div>
-        <div class="ekind"><span>Web · 단독 설계·운영</span><span class="badge">● Live</span></div>
+        <div class="ekind"><span>Web · 단독 설계·운영</span><span class="badge">● 운영 중</span></div>
         <h4>실시간 이벤트 운영 시스템</h4>
         <p>100명+ 동시 접속 오프라인 이벤트를 실시간으로 운영하는 웹앱. <b>9개 테이블·30+ RPC</b>의 정규화 아키텍처와 어드민 운영 제어 화면을 설계하고, 네트워크가 깜빡여도 화면이 멈추지 않도록 안정화했습니다. <b>진로캠프 현장 운영과 가장 가까운 작업</b>입니다.</p>
         <div class="emetrics">
@@ -624,7 +628,7 @@ section{position:relative}
         </div>
       </div>
     </div>
-    <div class="evid-note">제품명은 비공개 — 역량 중심으로 정리했습니다. 복잡한 내용을 쉬운 언어로 옮기는 자료 작업에도 익숙합니다.</div>
+    <div class="evid-note">보안상 제품명·일부 화면은 비공개 — 면접 시 운영자 화면·아키텍처·자동화 흐름은 시연 또는 상세 설명이 가능합니다.</div>
   </div>
 </section>
 
@@ -647,7 +651,7 @@ section{position:relative}
     <div class="cgrid">
       <div class="ci"><div class="k">Email</div><div class="v">hoon7624g@gmail.com</div></div>
       <div class="ci"><div class="k">Phone</div><div class="v">+82 10 2765 7624</div></div>
-      <div class="ci"><div class="k">Portfolio</div><div class="v">hoon7624g-web.github.io/portfolio</div></div>
+      <div class="ci"><div class="k">Portfolio</div><div class="v">hoon7624g-web.github.io/another</div></div>
       <div class="ci"><div class="k">Based in</div><div class="v">Seoul, Korea · KST</div></div>
     </div>
 
